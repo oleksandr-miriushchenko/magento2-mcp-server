@@ -1,0 +1,46 @@
+{
+  "name": "magento2-mcp-server",
+  "version": "0.1.0",
+  "description": "A secure MCP server foundation for Magento 2 and Adobe Commerce admin workflows.",
+  "type": "module",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": "24.x"
+  },
+  "packageManager": "pnpm@10.3.0",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "check": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test && pnpm build",
+    "dev:http": "tsx src/transports/http.ts",
+    "dev:stdio": "tsx src/transports/stdio.ts",
+    "format:check": "prettier --check package.json .fallowrc.json tsconfig.json tsconfig.build.json vitest.config.ts vitest.live.config.ts 'src/**/*.ts' 'tests/**/*.ts'",
+    "lint": "pnpm lint:eslint && pnpm lint:dead-code",
+    "lint:dead-code": "fallow --fail-on-issues dead-code --unused-files --unused-exports",
+    "lint:dead-code:all": "fallow --no-production --fail-on-issues dead-code --unused-files --unused-exports",
+    "lint:eslint": "eslint vitest.config.ts vitest.live.config.ts 'src/**/*.ts' 'tests/**/*.ts'",
+    "start:http": "node dist/transports/http.js",
+    "start:stdio": "node dist/transports/stdio.js",
+    "test": "vitest run",
+    "test:live": "NODE_OPTIONS=--use-system-ca node --env-file=.env.local ./node_modules/vitest/vitest.mjs run --config vitest.live.config.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/node": "^2.0.0",
+    "@modelcontextprotocol/server": "^2.0.0",
+    "limiter": "^4.0.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@modelcontextprotocol/client": "2.0.0",
+    "@types/node": "^24.13.3",
+    "eslint": "^10.9.1",
+    "fallow": "^3.25.0",
+    "prettier": "^3.9.6",
+    "tsx": "^4.23.12",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.68.0",
+    "vitest": "^4.1.11"
+  }
+}

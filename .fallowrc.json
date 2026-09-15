@@ -1,0 +1,14 @@
+{
+  "$schema": "./node_modules/fallow/schema.json",
+  "minimumVersion": "3.25.0",
+  "entry": ["src/transports/stdio.ts", "src/transports/http.ts"],
+  "ignorePatterns": ["examples/**"],
+  "production": true,
+  "includeEntryExports": true,
+  "ignoreExportsUsedInFile": true,
+  "typeAware": {
+    "enabled": true,
+    "projects": ["tsconfig.build.json"],
+    "require": "best-effort"
+  }
+}

@@ -1,0 +1,25 @@
+node_modules/
+dist/
+coverage/
+.pnpm-store/
+.fallow/
+*.tsbuildinfo
+
+# Local environment and credentials. Keep the checked-in templates.
+.env
+.env.*
+!.env.example
+!**/.env.example
+.nvmrc
+*.local
+*.local.json
+*.log
+audit*.jsonl
+*.tgz
+.DS_Store
+
+# Repository-local tooling and private work products.
+.agents/
+.codex/
+tasks/
+fallow-report.*

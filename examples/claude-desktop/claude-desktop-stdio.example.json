@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "magento2-mcp-server": {
+      "command": "/ABSOLUTE/PATH/TO/node",
+      "args": [
+        "--use-system-ca",
+        "--env-file=/ABSOLUTE/PATH/TO/magento2-mcp-server/.env.local",
+        "/ABSOLUTE/PATH/TO/magento2-mcp-server/dist/transports/stdio.js"
+      ]
+    }
+  }
+}

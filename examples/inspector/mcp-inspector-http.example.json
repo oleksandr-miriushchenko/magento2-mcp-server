@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "magento2-mcp-server-http": {
+      "type": "http",
+      "url": "http://127.0.0.1:3000/mcp",
+      "protocolEra": "modern"
+    }
+  }
+}

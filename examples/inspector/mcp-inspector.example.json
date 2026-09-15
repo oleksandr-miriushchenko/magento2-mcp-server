@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "magento2-mcp-server": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["--use-system-ca", "--env-file=.env.local", "dist/transports/stdio.js"],
+      "cwd": "<ABSOLUTE_PROJECT_PATH>",
+      "protocolEra": "modern",
+      "env": {
+        "NODE_EXTRA_CA_CERTS": "<ABSOLUTE_CA_PEM_PATH>"
+      }
+    }
+  }
+}
