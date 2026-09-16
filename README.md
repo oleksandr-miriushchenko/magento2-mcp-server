@@ -4,6 +4,40 @@ A TypeScript MCP server for AI agents that manage Magento 2 / Adobe Commerce bac
 
 Use it to build real merchant and operations AI agents.
 
+## Demo
+
+See a protected write confirmation, a LangChain agent using the server, and the complete MCP
+Inspector flow from tool discovery to structured product search results:
+
+![Magento MCP server demo](docs/assets/demo/magento-mcp-demo.webp)
+
+_All data shown is from a demo store._
+
+<details>
+<summary>View individual screenshots</summary>
+
+### Confirm a protected write operation
+
+[![An AI client requesting confirmation before a Magento product update](docs/assets/demo/write-confirmation.webp)](docs/assets/demo/write-confirmation.webp)
+
+### Use the server from a LangChain agent
+
+[![A LangChain agent summarizing Magento store data](docs/assets/demo/langchain-agent.webp)](docs/assets/demo/langchain-agent.webp)
+
+### Browse the tool catalog
+
+[![MCP Inspector showing the Magento tool catalog](docs/assets/demo/inspector-tools.webp)](docs/assets/demo/inspector-tools.webp)
+
+### Run a filtered product search
+
+[![MCP Inspector showing a filtered Magento product search](docs/assets/demo/inspector-product-search.webp)](docs/assets/demo/inspector-product-search.webp)
+
+### Inspect structured results
+
+[![MCP Inspector showing structured Magento product results](docs/assets/demo/inspector-product-results.webp)](docs/assets/demo/inspector-product-results.webp)
+
+</details>
+
 ## Features
 
 - **39 admin tools:** 28 read tools and 11 write tools cover orders, fulfillment, customers,
